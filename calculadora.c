@@ -1,35 +1,43 @@
 
 #include <stdio.h>
 
+float num1, num2, soma, subtracao, multi, divisao;
+
+int operacao;
+
 void somar(){
-    
+    soma = num1 + num2;
+    printf("\nA soma dos numeros e: %.1f", soma);
 }
 
 void subtrair(){
-    
+    subtracao = num1 - num2;
+    printf("A subtracao dos numeros e: %.1f", subtracao);
 }
 
 void multiplicar(){
-    
+    multi = num1 * num2;
+    printf("A multiplicacao dos numeros e: %.1f", multi);
 }
 
 void dividir(){
-    
+    if(num2 <= 0) {
+        return;
+    } else {
+        divisao = num1 / num2;
+    }
+    printf("A divisao e: %.1f", divisao);
 }
 
 int main()
 {
-    printf("--- Calculadora ---");
-    
-    printf("\n\nNão aceita numero com virgula!\n\n");
-    
-    int num1, num2, soma, subtracao, multi, divisao, operacao;
+    printf("--- + - Calculadora * / ---\n\n");
     
     printf("Digite o primeiro numero: ");
-    scanf("%d", &num1);
+    scanf("%f", &num1);
     
     printf("Digite o segundo numero: ");
-    scanf("%d", &num2);
+    scanf("%f", &num2);
 
     printf("\n\nDigite o numero da operacao que deseja fazer: \n\n");
     
